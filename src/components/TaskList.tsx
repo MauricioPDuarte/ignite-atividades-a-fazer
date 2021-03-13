@@ -16,14 +16,41 @@ export function TaskList() {
 
   function handleCreateNewTask() {
     // Crie uma nova task com um id random, não permita criar caso o título seja vazio.
+    if(!newTaskTitle)
+      return;
+
+    const randomNumber = Math.floor(Math.random() * 100) + 1 
+    
+    const task: Task = {
+      id: randomNumber,
+      title: newTaskTitle,  
+      isComplete: false
+    }
+
+    setTasks([...tasks, task]);
+    setNewTaskTitle('');
   }
 
   function handleToggleTaskCompletion(id: number) {
     // Altere entre `true` ou `false` o campo `isComplete` de uma task com dado ID
+
+    // Aqui eu poderia ter utilizado o .map, ele iria percorrer o estado 'tasks' e realizar uma condição. Se o ID
+    // de alguma das tasks fosse igual ao id da task passado, seria alterado a task. Caso contrario, se não for igual ao id, apenas
+    // retorna o objeto task para a lista novamente.
+    
+    const newTasks = [...tasks];
+    const taskIndex = newTasks.findIndex(task => task.id == id);
+    const task = newTasks[taskIndex];
+
+    task.isComplete = !task.isComplete;
+
+    newTasks[taskIndex] = task;
+
+    setTasks(newTasks);
   }
 
   function handleRemoveTask(id: number) {
-    // Remova uma task da listagem pelo ID
+    setTasks(tasks => tasks.filter(task => task.id !== id));
   }
 
   return (
