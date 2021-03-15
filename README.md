@@ -9,6 +9,7 @@
   <a href="#books-requisitos">Dependências</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-começando">Começando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#computer-iniciando-front-end">ReactJS</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#computer-iniciando-testes">Testes</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
 
@@ -46,7 +47,7 @@ enviar o link do nosso repositorio, contendo o projeto, para a plataforma da Roc
   # Entrar no diretório:
   $ cd atividades-a-fazer
 ```
-
+## :page_with_curl: ReactJS
 ## :computer: Iniciando front-end
 ```bash
   # Instalar as dependências:
@@ -55,7 +56,7 @@ enviar o link do nosso repositorio, contendo o projeto, para a plataforma da Roc
   # Rodar a aplicação:
   $ yarn dev
 ```
-
+## :page_with_curl: Testes
 ## :dart: Iniciando os testes
 ```bash
   # Rodar os testes
